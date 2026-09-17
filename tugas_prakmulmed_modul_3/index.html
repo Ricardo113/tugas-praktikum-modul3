@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta viewport ini WAJIB ada agar Bootstrap bersifat responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi - Modul 3 Bootstrap</title>
+
+    <!-- ===================================================== -->
+    <!-- Memanggil CSS Bootstrap lewat CDN                      -->
+    <!-- (tidak perlu download folder css/js Bootstrap sendiri, -->
+    <!-- cocok untuk di-hosting di GitHub Pages)                -->
+    <!-- ===================================================== -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+
+    <style>
+        /* Sedikit spacing tambahan supaya halaman tidak terlalu mepet */
+        body {
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 15px 0;
+            text-align: center;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================================================== -->
+    <!-- Class "container" wajib membungkus konten agar grid    -->
+    <!-- Bootstrap bekerja dengan rapi                           -->
+    <!-- ===================================================== -->
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center">Form Registrasi</h2>
+            <p class="text-center">Tugas Modul 3 - HTML dan Bootstrap</p>
+
+            <!-- ===================================================== -->
+            <!-- FORM REGISTRASI (sesuai contoh prosedur di modul)      -->
+            <!-- class "row" -> membuat kelompok kolom                  -->
+            <!-- class "col-sm-10" -> lebar kolom 10 dari 12 grid       -->
+            <!-- ===================================================== -->
+            <form action="">
+                <div class="row">
+                    <div class="col-sm-10">
+
+                        <!-- Setiap input dibungkus div.form-group -->
+                        <!-- sesuai aturan Bootstrap untuk spacing yang rapi -->
+                        <div class="form-group">
+                            <label for="name">Nama :</label>
+                            <input type="text" class="form-control" id="name"
+                                   placeholder="Name" name="nama" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email :</label>
+                            <input type="email" class="form-control" id="email"
+                                   placeholder="Email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password :</label>
+                            <input type="password" class="form-control" id="password"
+                                   placeholder="Password" name="Password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jk">Jenis Kelamin:</label>
+                            <select class="form-control" id="jk" name="jenis_kelamin">
+                                <option>Pria</option>
+                                <option>Wanita</option>
+                            </select>
+                        </div>
+
+                        <!-- class "btn btn-primary" adalah styling tombol bawaan Bootstrap -->
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- FOOTER (bagian TUGAS): berisi Nama dan NIM sesuai       -->
+    <!-- instruksi modul                                         -->
+    <!-- ===================================================== -->
+    <footer>
+        <p>Manuel Ricardo Lasut &nbsp;|&nbsp; NIM: 240211060044</p>
+    </footer>
+
+    <!-- ===================================================== -->
+    <!-- jQuery dan JS Bootstrap dipanggil lewat CDN, diletakkan -->
+    <!-- sebelum </body> agar halaman dimuat lebih cepat         -->
+    <!-- (jQuery wajib dipanggil dulu sebelum bootstrap.js)      -->
+    <!-- ===================================================== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
